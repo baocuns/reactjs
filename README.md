@@ -1,2 +1,2 @@
 # reactjs
-Project ReactJS of group 8
+Project ReactJS
