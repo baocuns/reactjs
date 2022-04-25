@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+</head>
+
+<body>
+    <!-- 
+    1. React.createElement() -> React element
+    2. so sanh document.createElement()
+    3. thay doi id className, style
+ -->
+
+    <!-- 1. React -->
+
+    <script>
+        //DOM
+        const h1DOM = document.createElement('h1');
+        h1DOM.title = 'Hello';
+        h1DOM.className = 'heading';
+        h1DOM.innerText = 'Hello World';
+
+        document.body.appendChild(h1DOM);
+
+        //React --> React-DOM
+        //React.createElement(type, props, chidlren, n)
+        const h1React = React.createElement('h1', {
+            title: 'Hello',
+            className: 'heading',
+        }, 'Hello world');
+        console.dir(h1DOM);
+        console.log(h1React);
+    </script>
+
+    <!-- 2. tao: 
+        <div class="post-item">
+            <h2 title="nguyen van bao">HOc react js</h2>
+            <p>nang cao</p>
+        </div>
+    -->
+    <script>
+        //DOM
+        const uDOM = document.createElement('ul');
+        const liDOM1 = document.createElement('li');
+        liDOM1.innerText = 'Javascript';
+
+        const liDOM2 = document.createElement('li');
+        liDOM2.innerText = 'ReactJS';
+
+        uDOM.appendChild(liDOM1);
+        uDOM.appendChild(liDOM2);
+
+        document.body.appendChild(uDOM);
+
+        //React
+        const ulReact = React.createElement(
+            'ul', {
+                id: 'ul-id',
+                style: 'color: red'
+            }, //null: them id ul
+            React.createElement('li', {
+                id: 'li-1'
+            }, 'Javascrip'),
+            React.createElement('li', null, 'ReactJs')
+        );
+
+        console.log(ulReact);
+    </script>
+    <!-- 3. bai tap
+    <div class="post-item">
+        <h2 title="nvb">Hoc Js</h2>
+        <p>easy</p>
+    </div>
+    -->
+    <script>
+        const bt = React.createElement('div', {
+                class: 'post-item'
+            },
+            React.createElement('h2', {
+                title: 'nvb',
+            }, 'Hoc Js'),
+            React.createElement('p', null, 'easy')
+        );
+        console.log(bt);
+    </script>
+</body>
+
+</html>
