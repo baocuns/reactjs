@@ -14,7 +14,28 @@
 <body>
     <!-- 
         1. tai sao phai su dung react dom
+        2. tai sao lai tach react - dom ra
+        3. render ui
      -->
+
+    <div id="root"></div>
+
+    <script>
+        const bt = React.createElement(
+            'div', {
+                class: 'post-item'
+            },
+            React.createElement('h2', {
+                title: 'nvb',
+            }, 'Hoc Js'),
+            React.createElement('p', null, 'easy')
+        );
+        console.log(bt);
+
+        //get root element
+        const root = document.querySelector('#root');
+        ReactDOM.render(bt, root);
+    </script>
 </body>
 
 </html>
