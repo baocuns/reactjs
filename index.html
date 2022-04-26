@@ -27,33 +27,30 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        // 1
-        // const bt = <div className="post-item">
-        //     <h2 title="nvb">Hoc Js</h2>
-        //     <p>easy</p>
-        // </div>
-
-        // ReactDOM.render(bt, document.querySelector('#root'));
 
         // 2.
-        const obj = [{
-            name: 'HTML'
-        }, {
-            name: 'CSS'
-        }, {
-            name: 'JS'
-        }
-        ];
-        const bt2 = <div className="post-item">
-            {
-                obj.map(e =>
-                    <h1>{e.name}</h1>
-                )
-            }
-        </div>
-
-        //get root element
-        ReactDOM.render(bt2, document.querySelector('#root'));
+        // const obj = [{
+        //     name: 'HTML'
+        // }, {
+        //     name: 'CSS'
+        // }, {
+        //     name: 'JS'
+        // }
+        // ];
+        // const bt2 = <div className="post-item">
+        //     { obj.map((e, index) =>
+        //             <h1 key={index}>{e.name}</h1>
+        //         )}
+        // </div>
+        // //get root element
+        // ReactDOM.render(bt2, document.querySelector('#root'));
+        const jsx = (
+            <React.Fragment>
+                <h1>bao</h1>
+                <h2>minh</h2>
+            </React.Fragment>
+        )
+        ReactDOM.render(jsx, document.querySelector('#root'));
     </script>
 </body>
 
