@@ -14,43 +14,30 @@
 
 <body>
     <!-- 
-        1. tai sao phai su dung react dom
-        2. tai sao lai tach react - dom ra
-        3. render ui
-
-        <div className="post-item">
-            <h2 title="nvb">Hoc Js</h2>
-            <p>easy</p>
-        </div>
+        ---------hook
+        1. function, class
+        -wrapper
+            -header -> Header component
+            ...
+        2. bieu dien don  gia voi JSX
      -->
 
     <div id="root"></div>
 
     <script type="text/babel">
 
-        // 2.
-        // const obj = [{
-        //     name: 'HTML'
-        // }, {
-        //     name: 'CSS'
-        // }, {
-        //     name: 'JS'
-        // }
-        // ];
-        // const bt2 = <div className="post-item">
-        //     { obj.map((e, index) =>
-        //             <h1 key={index}>{e.name}</h1>
-        //         )}
-        // </div>
-        // //get root element
-        // ReactDOM.render(bt2, document.querySelector('#root'));
-        const jsx = (
-            <React.Fragment>
-                <h1>bao</h1>
-                <h2>minh</h2>
-            </React.Fragment>
+        function Header() {
+            
+        }
+
+        const app = (
+            <div className="wrapper">
+                <div className="header"></div>
+                <div className="content"></div>
+                <div className="footer"></div>
+            </div>
         )
-        ReactDOM.render(jsx, document.querySelector('#root'));
+        ReactDOM.render(app, document.querySelector('#root'));
     </script>
 </body>
 
